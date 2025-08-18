@@ -1,7 +1,7 @@
-%div{:id => "#{dom_id post}"}
-  %p
-    %strong Title:
+.bg-white.rounded-lg.shadow-md.p-6.flex.flex-col.h-full{:id => dom_id(post)}
+  %h2.font-bold.text-lg.mb-2
     = post.title
-  %p
-    %strong Content:
+  %p.text-gray-700.text-sm.mb-4
     = post.content
+  %p.mt-4.text-right
+    = link_to "Show this post", post, class: "text-blue-500 hover:underline"
