@@ -1,5 +1,5 @@
 %p{:style => "color: green"}= notice
-= render @post
+= render @post, show_link: false
 %div
   = link_to "Edit this post", edit_post_path(@post)
   |

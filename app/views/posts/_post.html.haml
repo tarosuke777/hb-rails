@@ -3,5 +3,6 @@
     = post.title
   %p.text-gray-700.text-sm.mb-4
     = simple_format post.content
-  %p.mt-4.text-right
-    = link_to "Show this post", post, class: "text-blue-500 hover:underline"
+  - if local_assigns[:show_link] != false
+    %p.mt-4.text-right
+      = link_to "Show this post", post, class: "text-blue-500 hover:underline"
