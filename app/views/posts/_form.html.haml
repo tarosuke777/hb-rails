@@ -9,9 +9,9 @@
           %li= error.full_message
   %div
     = form.label :title, style: "display: block"
-    = form.text_field :title
+    = form.text_field :title, class: "border border-gray-400 p-2 rounded-md"
   %div
     = form.label :content, style: "display: block"
-    = form.textarea :content
+    = form.textarea :content, class: "border border-gray-400 p-2 rounded-md"
   %div
     = form.submit
