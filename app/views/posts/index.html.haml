@@ -15,3 +15,6 @@
           = post.title
         .text-gray-700.text-sm.mb-4.line-clamp-3
           = simple_format post.content
+
+= paginate @posts, class: "mt-3"
+
