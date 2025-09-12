@@ -1,5 +1,5 @@
 = paginator.render do
-  %nav.pagination{"aria-label" => "pager", :role => "navigation"}
+  %nav.pagination.mt-3{"aria-label" => "pager", :role => "navigation"}
     = first_page_tag unless current_page.first?
     = prev_page_tag unless current_page.first?
     - each_page do |page|
