@@ -5,6 +5,8 @@
 
 = link_to "New post", new_post_path, class: "mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
 
+= paginate @posts
+
 .mt-3.grid.sm:grid-cols-1.md:grid-cols-2.lg:grid-cols-3.gap-6
   - @posts.each do |post|
     = link_to post do
@@ -16,5 +18,4 @@
         .text-gray-700.text-sm.mb-4.line-clamp-3
           = simple_format post.content
 
-= paginate @posts
 
