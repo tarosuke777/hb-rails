@@ -1,1 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
 @import "tailwindcss";
+
+@theme {
+  /* フォントの名前を定義 */
+  --font-NotoSansJP: "Noto Sans JP", sans-serif;
+  --font-Anton: "Anton", sans-serif;
+}
