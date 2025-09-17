@@ -1,4 +1,6 @@
 .bg-white.rounded-lg.shadow-md.p-6.flex.flex-col.h-full{:id => dom_id(post)}
+  .text-gray-700.text-sm.mb-4
+    = post.created_at.strftime("%Y/%m/%d(%a)")
   %h2.font-bold.text-lg.mb-2
     = post.title
   .text-gray-700.text-sm.mb-4
