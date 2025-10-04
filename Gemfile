@@ -40,12 +40,6 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'haml-rails'
-gem 'erb2haml'
-
-gem 'cssbundling-rails'
-gem 'jsbundling-rails'
-
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -68,6 +62,11 @@ group :test do
   gem "selenium-webdriver"
 end
 
+gem 'haml-rails'
+gem 'erb2haml'
+
 gem "tailwindcss-rails", "~> 4.3"
 
 gem "kaminari", "~> 1.2"
+
+gem "mysql2", "~> 0.5.7"
