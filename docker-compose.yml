@@ -15,9 +15,9 @@ services:
       - home_network
 secrets:
   secret_key_base:
-    file: /mnt/c/dev/secrets/rails_secret_key_base.txt
+    file: ${RAILS_SECRET_PATH}
   mysql_user_password:
-    file: /mnt/c/dev/secrets/mysql_hb_user_password.txt
+    file: ${MYSQL_USER_PASSWORD_PATH}
 networks:
   home_network:
     external: true
