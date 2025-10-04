@@ -1,0 +1,23 @@
+services:
+  hb-ap:
+    image: hb:1.0
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    secrets:
+      - secret_key_base
+      - mysql_user_password
+    environment:
+      DATABASE_HOST: home-db-mysql
+      DATABASE_PORT: 3306
+    networks:
+      - home_network
+secrets:
+  secret_key_base:
+    file: /mnt/c/dev/secrets/rails_secret_key_base.txt
+  mysql_user_password:
+    file: /mnt/c/dev/secrets/mysql_hb_user_password.txt
+networks:
+  home_network:
+    external: true
