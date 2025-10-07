@@ -14,5 +14,10 @@
     %link{:href => "/icon.png", :rel => "apple-touch-icon"}/
     = stylesheet_link_tag :app, "data-turbo-track": "reload"
     = javascript_importmap_tags
-  %body.font-NotoSansJP.py-2.px-4
-    = yield
+  %body.font-NotoSansJP.bg-gray-50.text-gray-800    
+    %header.bg-gray-800.shadow-lg.py-4
+      .container.mx-auto.flex.justify-between.items-center.px-4
+        %span.text-2xl.font-bold.text-white
+          HB
+    .container.mx-auto.px-4.py-10
+      = yield
