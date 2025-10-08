@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     # @posts = Post.all
-    @posts = Post.order(created_at: :desc).page(params[:page]).per(12)
+    @posts = Post.order(posted_at: :desc).page(params[:page]).per(12)
   end
 
   # GET /posts/1 or /posts/1.json
@@ -51,7 +51,6 @@ class PostsController < ApplicationController
   # DELETE /posts/1 or /posts/1.json
   def destroy
     @post.destroy!
-
     respond_to do |format|
       format.html { redirect_to posts_path, notice: "Post was successfully destroyed.", status: :see_other }
       format.json { head :no_content }
@@ -66,6 +65,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.expect(post: [ :title, :content ])
+      params.expect(post: [ :title, :content, :posted_at ])
     end
 end
