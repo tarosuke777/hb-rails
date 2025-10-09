@@ -49,6 +49,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "ruby-lsp"
 end
 
 group :development do
@@ -62,11 +64,18 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'haml-rails'
-gem 'erb2haml'
+gem "haml-rails"
+gem "erb2haml"
 
 gem "tailwindcss-rails", "~> 4.3"
 
 gem "kaminari", "~> 1.2"
 
 gem "mysql2", "~> 0.5.7"
+
+# group :development, :test do
+#   # コードスタイルチェックと整形のため
+#   gem 'rubocop' 
+#   # （推奨）より高速でモダンな言語サーバー
+#   gem 'ruby-lsp' 
+# end

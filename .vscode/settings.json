@@ -1,0 +1,11 @@
+{
+  // ファイル保存時に自動フォーマットを有効化
+  "editor.formatOnSave": true,
+
+  // RubyファイルでRuby LSPをデフォルトのフォーマッターに指定
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  },
+  // Ruby LSPでRuboCopをフォーマッターとして使用するように設定
+  "rubyLsp.formatter": "rubocop_internal",
+}
