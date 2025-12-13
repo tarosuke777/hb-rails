@@ -75,7 +75,12 @@ gem "mysql2", "~> 0.5.7"
 
 # group :development, :test do
 #   # コードスタイルチェックと整形のため
-#   gem 'rubocop' 
+#   gem 'rubocop'
 #   # （推奨）より高速でモダンな言語サーバー
-#   gem 'ruby-lsp' 
+#   gem 'ruby-lsp'
 # end
+#
+
+group :development do
+  gem "bundler-audit"
+end
