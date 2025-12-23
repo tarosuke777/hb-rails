@@ -1,3 +1,4 @@
+name: hb
 services:
   hb-ap:
     image: hb:1.0
