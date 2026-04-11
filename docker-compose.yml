@@ -10,7 +10,7 @@ services:
       - secret_key_base
       - mysql_user_password
     environment:
-      DATABASE_HOST: home-db-mysql
+      DATABASE_HOST: home-db-mariadb
       DATABASE_PORT: 3306
     networks:
       - home_network
