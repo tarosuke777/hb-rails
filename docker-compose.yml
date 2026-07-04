@@ -1,6 +1,7 @@
 name: hb
 services:
   hb-ap:
+    container_name: hb-ap
     image: hb:1.0
     build:
       context: .
